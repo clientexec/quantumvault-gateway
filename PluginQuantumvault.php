@@ -9,94 +9,94 @@ class PluginQuantumvault extends GatewayPlugin
     function getVariables()
     {
         $variables = array (
-            /*T*/'Plugin Name'/*/T*/ => array (
+            lang('Plugin Name') => array (
                                 'type'          =>'hidden',
-                                'description'   =>/*T*/'How CE sees this plugin (not to be confused with the Signup Name)'/*/T*/,
-                                'value'         =>/*T*/'Quantum Vault Gateway'/*/T*/
+                                'description'   =>lang('How CE sees this plugin (not to be confused with the Signup Name)'),
+                                'value'         =>lang('Quantum Vault Gateway')
                                ),
-            /*T*/'Use Maxmind'/*/T*/ => array(
+            lang('Use Maxmind') => array(
                                 'type'          =>'yesno',
-                                'description'   =>/*T*/'Use Quantum Vault Gateway\'s Maxmind fraud screening services.'/*/T*/,
+                                'description'   =>lang('Use Quantum Vault Gateway\'s Maxmind fraud screening services.'),
                                 'value'         =>0,
                                ),
-            /*T*/'Quantum Vault Gateway Username'/*/T*/ => array (
+            lang('Quantum Vault Gateway Username') => array (
                                 'type'          =>'text',
-                                'description'   =>/*T*/'Please enter your Quantum Vault Gateway Username Here.'/*/T*/,
+                                'description'   =>lang('Please enter your Quantum Vault Gateway Username Here.'),
                                 'value'         =>''
                                ),
-            /*T*/'Quantum Vault Gateway VaultKey'/*/T*/ => array (
+            lang('Quantum Vault Gateway VaultKey') => array (
                                 'type'          =>'password',
-                                'description'   =>/*T*/'Please enter your Quantum Vault Gateway VaultKey Here.'/*/T*/,
+                                'description'   =>lang('Please enter your Quantum Vault Gateway VaultKey Here.'),
                                 'value'         =>''
                                ),
-            /*T*/'Quantum Vault Gateway RestrictKey'/*/T*/ => array (
+            lang('Quantum Vault Gateway RestrictKey') => array (
                                 'type'          =>'password',
-                                'description'   =>/*T*/'Please enter your Quantum Vault Gateway RestrictKey Here.'/*/T*/,
+                                'description'   =>lang('Please enter your Quantum Vault Gateway RestrictKey Here.'),
                                 'value'         =>''
                                ),
-            /*T*/'Quantum Vault Gateway Inline Frame API Username'/*/T*/ => array (
+            lang('Quantum Vault Gateway Inline Frame API Username') => array (
                                 'type'          =>'text',
-                                'description'   =>/*T*/'Please enter your Quantum Vault Gateway Inline Frame API Username Here.'/*/T*/,
+                                'description'   =>lang('Please enter your Quantum Vault Gateway Inline Frame API Username Here.'),
                                 'value'         =>''
                                ),
-            /*T*/'Quantum Vault Gateway Inline Frame API Key'/*/T*/ => array (
+            lang('Quantum Vault Gateway Inline Frame API Key') => array (
                                 'type'          =>'password',
-                                'description'   =>/*T*/'Please enter your Quantum Vault Gateway Inline Frame API Key Here.'/*/T*/,
+                                'description'   =>lang('Please enter your Quantum Vault Gateway Inline Frame API Key Here.'),
                                 'value'         =>''
                                ),
-            /*T*/'Invoice After Signup'/*/T*/ => array (
+            lang('Invoice After Signup') => array (
                                 'type'          =>'yesno',
-                                'description'   =>/*T*/'Select YES if you want an invoice sent to the customer after signup is complete.'/*/T*/,
+                                'description'   =>lang('Select YES if you want an invoice sent to the customer after signup is complete.'),
                                 'value'         =>'1'
                                ),
-            /*T*/'Signup Name'/*/T*/ => array (
+            lang('Signup Name') => array (
                                 'type'          =>'text',
-                                'description'   =>/*T*/'Select the name to display in the signup process for this payment type. Example: eCheck or Credit Card.'/*/T*/,
+                                'description'   =>lang('Select the name to display in the signup process for this payment type. Example: eCheck or Credit Card.'),
                                 'value'         =>'Credit Card'
                                ),
-            /*T*/'Payment Form Title'/*/T*/ => array(
+            lang('Payment Form Title') => array(
                                 'type'          =>'text',
-                                'description'   =>/*T*/'The Payment Form will only be displayed when extra user input is required, i.e. when using Verified By Visa, MaterCard SecureCode or DialVerify.'/*/T*/,
+                                'description'   =>lang('The Payment Form will only be displayed when extra user input is required, i.e. when using Verified By Visa, MaterCard SecureCode or DialVerify.'),
                                 'value'         =>''
                                ),
-            /*T*/'Payment Form Header'/*/T*/ => array(
+            lang('Payment Form Header') => array(
                                 'type'          =>'textarea',
-                                'description'   =>/*T*/'The Payment Form will only be displayed when extra user input is required, i.e. when using Verified By Visa, MaterCard SecureCode or DialVerify. HTML is accepted.'/*/T*/,
+                                'description'   =>lang('The Payment Form will only be displayed when extra user input is required, i.e. when using Verified By Visa, MaterCard SecureCode or DialVerify. HTML is accepted.'),
                                 'value'         =>''
                                ),
-            /*T*/'Receipt Page Header'/*/T*/ => array(
+            lang('Receipt Page Header') => array(
                                 'type'          =>'textarea',
-                                'description'   =>/*T*/'The Receipt Page will only be displayed when extra user input is required, i.e. when using Verified By Visa, MaterCard SecureCode or DialVerify. HTML is accepted.'/*/T*/,
+                                'description'   =>lang('The Receipt Page will only be displayed when extra user input is required, i.e. when using Verified By Visa, MaterCard SecureCode or DialVerify. HTML is accepted.'),
                                 'value'         =>''
                                ),
-            /*T*/'Receipt Page Footer'/*/T*/ => array(
+            lang('Receipt Page Footer') => array(
                                 'type'          =>'textarea',
-                                'description'   =>/*T*/'The Receipt Footer will only be displayed when extra user input is required, i.e. when using Verified By Visa, MaterCard SecureCode or DialVerify. HTML is accepted.'/*/T*/,
+                                'description'   =>lang('The Receipt Footer will only be displayed when extra user input is required, i.e. when using Verified By Visa, MaterCard SecureCode or DialVerify. HTML is accepted.'),
                                 'value'         =>''
                                ),
-            /*T*/'Dummy Plugin'/*/T*/ => array (
+            lang('Dummy Plugin') => array (
                                 'type'          =>'hidden',
-                                'description'   =>/*T*/'1 = Only used to specify a billing type for a customer. 0 = full fledged plugin requiring complete functions'/*/T*/,
+                                'description'   =>lang('1 = Only used to specify a billing type for a customer. 0 = full fledged plugin requiring complete functions'),
                                 'value'         =>'0'
                                ),
-            /*T*/'Auto Payment'/*/T*/ => array (
+            lang('Auto Payment') => array (
                                 'type'          =>'hidden',
-                                'description'   =>/*T*/'No description'/*/T*/,
+                                'description'   =>lang('No description'),
                                 'value'         =>'1'
                                ),
-            /*T*/'30 Day Billing'/*/T*/ => array (
+            lang('30 Day Billing') => array (
                                 'type'          =>'hidden',
-                                'description'   =>/*T*/'Select YES if you want ClientExec to treat monthly billing by 30 day intervals.  If you select NO then the same day will be used to determine intervals.'/*/T*/,
+                                'description'   =>lang('Select YES if you want ClientExec to treat monthly billing by 30 day intervals.  If you select NO then the same day will be used to determine intervals.'),
                                 'value'         =>'0'
                                ),
-           /*T*/"Check CVV2"/*/T*/ => array (
+           lang("Check CVV2") => array (
                                 "type"          =>"hidden",
-                                "description"   =>/*T*/"Select YES if you want to accept CVV2 for this plugin."/*/T*/,
+                                "description"   =>lang("Select YES if you want to accept CVV2 for this plugin."),
                                 "value"         =>"0"
                                ),
-            /*T*/'Update Gateway'/*/T*/ => array (
+            lang('Update Gateway') => array (
                                 'type'          =>'hidden',
-                                'description'   =>/*T*/'1 = Create, update or remove Gateway customer information through the function UpdateGateway when customer choose to use this gateway, customer profile is updated, customer is deleted or customer status is changed. 0 = Do nothing.'/*/T*/,
+                                'description'   =>lang('1 = Create, update or remove Gateway customer information through the function UpdateGateway when customer choose to use this gateway, customer profile is updated, customer is deleted or customer status is changed. 0 = Do nothing.'),
                                 'value'         =>'1'
                                ),
         );
