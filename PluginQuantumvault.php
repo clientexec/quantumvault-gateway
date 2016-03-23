@@ -425,7 +425,8 @@ IFRAME;
         $params['plugin_quantumvault_Quantum Vault Gateway Username'] = $this->settings->get('plugin_quantumvault_Quantum Vault Gateway Username');
         switch($params['Action']){
             case 'update':  // When updating customer profile or changing to use this gateway
-                if(in_array($params['Status'], array('cancel' => -2, 'fraud' => -3))){
+                $statusAliasGateway = StatusAliasGateway::getInstance($this->user);
+                if(in_array($params['Status'], $statusAliasGateway->getUserStatusIdsFor(array(USER_STATUS_INACTIVE, USER_STATUS_CANCELLED, USER_STATUS_FRAUD)))){
                   $this->CustomerRemove($params);
                 }else{
                   $this->AddUpdateCustomer($params);
