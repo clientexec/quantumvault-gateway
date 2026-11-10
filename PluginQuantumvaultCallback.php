@@ -9,6 +9,11 @@ class PluginQuantumvaultCallback extends PluginCallback
 
     function processCallback()
     {
+        // Execute PluginCallback::processCallback() first
+        if (!parent::processCallback()) {
+            return;
+        }
+
         // ignore blank browser requests
         if (!isset($_GET['invoice_num']) || !isset($_GET['transID'])) {
             return;

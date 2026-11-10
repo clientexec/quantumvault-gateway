@@ -366,7 +366,7 @@ class PluginQuantumvault extends GatewayPlugin
             '<GatewayLogin>XXX MASKED XXX</GatewayLogin>' => '/<GatewayLogin>(.*)<\/GatewayLogin>/',
             '<GatewayKey>XXX MASKED XXX</GatewayKey>'     => '/<GatewayKey>(.*)<\/GatewayKey>/'
         );
-        $response = NE_Network::curlRequest($this->settings, $url, $xml, false, true, false, 'POST', false, $mask);
+        $response = NE_Network::curlRequest($this->settings, $url, $xml, false, false, false, 'POST', false, $mask);
 
         if ($response) {
             $response = XmlFunctions::xmlize(
